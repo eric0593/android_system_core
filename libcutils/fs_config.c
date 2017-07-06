@@ -161,7 +161,10 @@ static const struct fs_path_config android_files[] = {
     { 00750, AID_ROOT,      AID_SHELL,     0, "init*" },
     { 00750, AID_ROOT,      AID_SHELL,     0, "sbin/fs_mgr" },
     { 00640, AID_ROOT,      AID_SHELL,     0, "fstab.*" },
+    { 00755, AID_ROOT,      AID_SHELL,      0, "system/etc/init.autotask.sh" },
+    { 00755, AID_ROOT,      AID_SHELL,      0, "system/etc/crontab/*" },    
     { 00644, AID_ROOT,      AID_ROOT,      0, 0 },
+
 };
 
 static int fs_config_open(int dir, const char *target_out_path)
